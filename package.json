@@ -15,7 +15,7 @@
     "classnames": "^2.3.2",
     "clsx": "^2.0.0",
     "datocms-client": "^3.5.21",
-    "framer-motion": "^10.16.4",
+    "framer-motion": "^11.0.0",
     "graphql-request": "^6.1.0",
     "next": "15.3.1",
     "react": "^19.0.0",

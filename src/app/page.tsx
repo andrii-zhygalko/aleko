@@ -28,7 +28,7 @@ export default async function Home() {
     subtitle: 'От 0 до 100,000 за 90 дней',
     description:
       'Станьте известным всего за 3 месяца без затрат на рекламу! Узнайте ключ к созданию вирусного контента и превратите свои идеи в миллионные просмотры.',
-    imageUrl: '/images/hero_image.jpg',
+    imageUrl: '/images/hero_image.png',
     price: '1000 грн',
     oldPrice: '2000 грн',
     discountPercent: '-50%',
