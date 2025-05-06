@@ -30,6 +30,7 @@ export function HeroSection({
               alt='photo of Aleko Sokurashvili'
               fill
               className='object-cover'
+              sizes='(max-width: 1023px) 313px, 100vw'
               priority
             />
             <div className='absolute inset-0 bg-gradient-to-b from-transparent from-[57%] to-black/70 to-[80%]'></div>
@@ -65,6 +66,7 @@ export function HeroSection({
                 src={imageUrl}
                 alt='photo of Aleko Sokurashvili'
                 fill
+                sizes='(min-width: 1024px) 644px, 100vw'
                 className='object-cover'
                 priority
               />

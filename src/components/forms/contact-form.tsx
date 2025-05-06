@@ -125,12 +125,9 @@ export function ContactForm({ onClose }: ContactFormProps) {
             <input
               type='email'
               className='h-[46px] w-full rounded-[14px] px-5 py-[15px] font-raleway text-sm font-normal bg-white text-background shadow-[0px_10px_78px_1px_rgba(121,121,121,0.12)] focus:outline-none focus:ring-2 focus:ring-purple-500'
-              placeholder='Email'
+              placeholder='Email*'
               {...register('email')}
             />
-            <span className='absolute left-14 top-1/2 -translate-y-1/2 text-rose-light font-raleway text-sm'>
-              *
-            </span>
           </div>
           {errors.email && (
             <p className='mt-1 text-sm text-red-400'>{errors.email.message}</p>

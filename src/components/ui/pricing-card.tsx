@@ -3,7 +3,7 @@
 import { cn } from '@/lib/utils';
 import { Button } from './button';
 import {
-  pricingButtonVariants,
+  pricingCardToButtonVariant,
   PricingCardVariant,
 } from '@/lib/ui/button-variants';
 
@@ -39,7 +39,7 @@ export function PricingCard({
   onPurchase,
 }: PricingCardProps) {
   const cardBaseStyles =
-    'w-[313px] lg:w-[360px] min-h-[430px] rounded-[28px]  p-[32px_28px] lg:p-[26px_36px] flex flex-col items-center relative shadow-[4px_6px_10px_4px_rgba(167,93,243,0.20)_inset]';
+    'w-[313px] lg:w-[360px] min-h-[430px] rounded-[28px] p-[32px_28px] lg:p-[26px_36px] flex flex-col items-center relative shadow-[4px_6px_10px_4px_rgba(167,93,243,0.20)_inset]';
 
   const cardVariantStyles = {
     default: 'bg-background text-white relative overflow-hidden',
@@ -47,7 +47,7 @@ export function PricingCard({
     max: 'bg-gradient-to-br from-gradient-blue via-gradient-purple to-gradient-violet/50 text-white',
   };
 
-  const buttonClassName = pricingButtonVariants[variant];
+  const buttonVariant = pricingCardToButtonVariant[variant];
 
   const badgeStyles = {
     default: '',
@@ -130,7 +130,10 @@ export function PricingCard({
           </ul>
         </div>
 
-        <Button onClick={onPurchase} className={cn(buttonClassName)}>
+        <Button
+          onClick={onPurchase}
+          variant={buttonVariant}
+          className='w-[256px] h-[47px] lg:w-[287px] lg:h-[57px] rounded-[52px] text-sm lg:text-base font-manrope font-semibold py-[17px] px-[64px] mt-auto'>
           {ctaText}
         </Button>
       </div>

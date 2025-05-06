@@ -23,6 +23,10 @@ export async function fetchFromDatoCMS<T = Record<string, unknown>>({
   query: string;
   variables?: Record<string, unknown>;
   preview?: boolean;
+  next?: {
+    revalidate?: number | false;
+    tags?: string[];
+  };
 }): Promise<T> {
   try {
     const client = createDatoCMSClient({ preview });

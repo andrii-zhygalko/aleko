@@ -23,7 +23,7 @@ export function CallToActionSection({
           alt='Секреты вирусных видео'
           width={608}
           height={488}
-          className='h-full object-cover'
+          className='h-full w-auto object-cover'
           priority
         />
       </div>

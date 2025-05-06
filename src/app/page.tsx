@@ -22,6 +22,8 @@ interface TariffplansData {
   allTariffplans: TariffPlan[];
 }
 
+export const revalidate = 60;
+
 export default async function Home() {
   const homeContent = {
     title: 'СЕКРЕТЫ ВИРУСНЫХ ВИДЕО',
@@ -39,6 +41,9 @@ export default async function Home() {
   try {
     const data = await fetchFromDatoCMS<TariffplansData>({
       query: TARIFF_PLANS_QUERY,
+      next: {
+        tags: ['tariffPlans'],
+      },
     });
 
     tariffPlans = data.allTariffplans;
